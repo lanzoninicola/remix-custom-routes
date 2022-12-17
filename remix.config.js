@@ -1,0 +1,17 @@
+const { routes } = require("./app/modules/auth/index.js");
+
+console.log(routes);
+
+/** @type {import('@remix-run/dev').AppConfig} */
+module.exports = {
+  ignoredRouteFiles: ["**/.*"],
+  // appDirectory: "app",
+  // assetsBuildDirectory: "public/build",
+  // serverBuildPath: "build/index.js",
+  // publicPath: "/build/",
+
+  /** THIS IS A DRAFT THAT FIRE AN ERROR TO CHECK */
+   routes: {
+    ...routes,
+  },
+};
